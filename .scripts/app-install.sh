@@ -15,6 +15,7 @@ greenclip daemon
 
 # Install Starship
  curl -sS https://starship.rs/install.sh | sh
+ touch ~/.bashrc
  echo 'eval "$(starship init bash)"' >> ~/.bashrc
 
 # In ~/.config/starship.toml you can change the disto logo and username on line 40
