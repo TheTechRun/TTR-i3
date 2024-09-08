@@ -1,0 +1,17 @@
+Home,~/
+Config Directory,~/.config
+Scripts,~/.scripts
+Rofi,~/.config/rofi
+Rofi Themes,~/.config/rofi_themes
+Rofi Scripts,~/.scripts/rofiscripts/
+Documents,~/Documents
+Nix Directory,/etc/nixos
+Application Shortcuts,~/.local/share/applications
+Downloads,~/Downloads
+Pictures,~/Pictures
+Polybar Modules,~/.config/polybar/modules/
+terminal scripts,~/.scripts/rofiscripts/Universal/Terminal_Scripts/
+Wallpapers,~/Pictures/Wallpapers
+icons,~/.icons
+themes,~/.themes
+local~/.local

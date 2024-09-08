@@ -1,0 +1,401 @@
+#  ____             __ _                          _   _           
+# / ___|___  _ __  / _(_) __ _ _   _ _ __ ___  __| | | |__  _   _ 
+#| |   / _ \| '_ \| |_| |/ _` | | | | '__/ _ \/ _` | | '_ \| | | |
+#| |__| (_) | | | |  _| | (_| | |_| | | |  __/ (_| | | |_) | |_| |
+# \____\___/|_| |_|_| |_|\__, |\__,_|_|  \___|\__,_| |_.__/ \__, |
+#                        |___/                              |___/ 
+# _____ _____ ____  
+#|_   _|_   _|  _ \ 
+#  | |   | | | |_) |
+#  | |   | | |  _ < 
+#  |_|   |_| |_| \_\
+
+  # DESKTOP DESKTOP DESKTOP DESKTOP                          
+
+#to Reload from terminal:
+# i3-msg reload
+
+# SEE NOTES AT END OF THIS FILE
+
+#-----------------------------------------------------------------------------
+# VARIABLES SETUP
+#-----------------------------------------------------------------------------
+
+set $s Mod4
+set $a Mod1 
+set $b bindsym
+set $e exec
+
+# Colors
+set $main AAAAAA
+set $secondary 1E1E1E
+set $focusedtitletext 000000
+set $unfocusedtitletext ffffff
+
+#-----------------------------------------------------------------------------
+# SOME OTHER COMMANDS
+#-----------------------------------------------------------------------------
+
+#workspace_auto_back_and_forth yes
+tiling_drag titlebar
+
+
+#-----------------------------------------------------------------------------
+# BAR SETUP
+#-----------------------------------------------------------------------------
+
+# POLYBAR
+exec_always --no-startup-id $HOME/.config/polybar/config.ini
+#default_border none
+
+# Window Title Font
+font pango:MartianMono Nerd Font Mono Bold 10
+#font pango:JetBrainsMono Nerd Font Mono Bold 14
+#font pango:DejaVu Sans Mono Bold 14       
+
+#---------------------------------------------------------------------
+# WINDOWS THEME SETUP
+#---------------------------------------------------------------------
+
+# GAPS
+gaps inner 10
+gaps outer 5
+
+# CHANGE WINDOW BORDER COLORS
+
+# class        border  background  text  indicator child_border
+
+client.focused  #$focusedtitletext  #$main #$focusedtitletext  #$secondary  #$secondary 
+
+client.focused_inactive #$main #$secondary #$unfocusedtitletext #$main #$main
+
+client.unfocused #$secondary #$secondary #$unfocusedtitletext #$main #$main
+
+client.urgent #$main #$main #$unfocusedtitletext #$main #$main
+
+client.placeholder  #$secondary #$main  #$secondary  #$secondary  #$secondary 
+
+
+#---------------------------------------------------------------------
+# STARTUP SECTION
+#---------------------------------------------------------------------
+
+# Startup Apps
+
+# Alacritty in Scratchpad
+$e --no-startup-id alacritty -t SCRATCHTERM
+
+# Startup Productivity
+exec_always --no-startup-id sleep 3 && nitrogen --restore # wallpapers
+$e --no-startup-id nm-applet # Nework Applet
+$e --no-startup-id greenclip daemon # Clipboard
+$e --no-startup-id dunst -config $HOME/.config/dunst/dunstrc # dunst
+
+# Change Volume or Toggle Mute - i3BLOCKS
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && pkill -RTMIN+10 i3blocks
+
+
+# Activate screen layout (use arandr first)
+$b $s+z $e $HOME/.screenlayout
+
+#---------------------------------------------------------------------
+# LOCKSCREEN SECTION
+#---------------------------------------------------------------------
+#Light DM Lock 
+$b $a+l $e light-locker-command -l
+$b $s+l $e light-locker-command -l
+exec_always --no-startup-id xautolock -time 10 -locker "light-locker-command -l"
+
+#---------------------------------------------------------------------
+# KEYBIND SECTION
+#---------------------------------------------------------------------
+
+$b Control+Shift+T $e bash $HOME/.scripts/TTR/TTR-i3-Themer/TTR-i3-Themer.sh # TTR i3 theme switcher
+
+  #CONTAINER LAYOUTS (F1-F4)
+# change container layout (stacked, tabbed, toggle split)
+$b $s+F1 layout stacking
+$b $s+F2 layout toggle split
+$b $s+F3 floating toggle
+#$b $s+F3 layout tabbed
+
+# ROFI Section (Run rofi -dump-config > $HOME/.config/rofi/config.rasi to get first config file)
+$b $a+space $e bash $HOME/.scripts/TTR/TTR-Rofi/TTR-Rofi.sh #Universal
+$b $a+z $e rofi -show drun -show-icons #Program lists
+$b $a+c $e bash $HOME/.scripts/rofiscripts/clipboard.sh # Clipboard
+$b $s+Tab $e rofi -show window show-icons #switch windows
+
+#APPLICATIONS Section 
+$b $s+w $e chromium # Browser
+$b $s+p $e polybar # Bar
+$b $s+t $e alacritty # Terminal
+$b $s+Shift+t $e alacritty -t SCRATCHTERM #Terminal opens up in scratchpad
+$b $s+f $e  nemo  # File browser
+$b $s+g $e  gnome-text-editor # Text Editor
+$b $s+y $e chromium --new-window https://www.youtube.com/feed/subscriptions # Youtube
+$b Print $e flameshot gui # Gui Screenshot
+$b Control+Print $e scrot -d 5 $HOME/Pictures/Screenshots/screenshot_%Y-%m-%d-%H-%M-%S.png # Terminal Screenshot
+
+# WINDOWS Section
+# Use Mouse+$s to drag floating windows to their wanted position
+floating_modifier $s
+
+#Kill all except (to remove or add go from . --->|)
+$b Control+$a+q [title="^(?!.*SCRATCHTERM).*"] kill
+
+# kill focused window
+$b $s+q kill
+
+# FOCUS ON WINDOW
+
+# Change Focus with hjkl
+$b $s+j focus left
+$b $s+k focus down
+$b $s+l focus up
+$b $s+semicolon focus right
+
+# Change Focus with Cursor keys:
+$b $s+Left focus left
+$b $s+Down focus down
+$b $s+Up focus up
+$b $s+Right focus right
+
+# MOVE FOCUSED WINDOW
+
+# Move Focused Window with hjkl
+$b $s+Shift+j move left
+$b $s+Shift+k move down
+$b $s+Shift+l move up
+$b $s+Shift+semicolon move right
+
+#  Move Focused Window with Cursor keys:
+$b $s+Shift+Left move left
+$b $s+Shift+Down move down
+$b $s+Shift+Up move up
+$b $s+Shift+Right move right
+
+# enter fullscreen mode for the focused container
+$b $s+Return fullscreen
+
+# change focus between tiling / floating windows
+$b $s+space focus mode_toggle
+
+#----------------------------------------------------------------------------- 
+# WORKSPACE SECTION
+#------------------------------------------------------------------------------
+
+# Workspace Binds 
+# ( xprop | grep WM_CLASS ) for class and instance
+# (?i) for case insensitive
+
+# Bind workspaces to monitors (Set this up for your Monitor Setup)
+#workspace 0 output DP-2
+#workspace 1 output DP-2
+#workspace 2 output DP-2 
+#workspace 3 output DP-1 
+#workspace 4 output DP-1 
+#workspace 5 output DVI-I-1-1 
+#workspace 6 output DVI-I-1-1 
+#workspace 7 output HDMI-1 
+#workspace 8 output HDMI-1 # Messaging connected to 󰍡 below
+#workspace 9 output HDMI-1 
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws0 "0"
+
+# switch to workspace
+$b $s+1 workspace $ws1 
+$b $s+2 workspace $ws2 
+$b $s+3 workspace $ws3 
+$b $s+4 workspace $ws4
+$b $s+5 workspace $ws5
+$b $s+6 workspace $ws6
+$b $s+7 workspace $ws7
+$b $s+8 workspace $ws8
+$b $s+9 workspace $ws9
+$b $s+0 workspace $ws0
+
+# move focused container to workspace
+$b $s+Shift+1 move container to workspace $ws1
+$b $s+Shift+2 move container to workspace $ws2
+$b $s+Shift+3 move container to workspace $ws3
+$b $s+Shift+4 move container to workspace $ws4
+$b $s+Shift+5 move container to workspace $ws5
+$b $s+Shift+6 move container to workspace $ws6
+$b $s+Shift+7 move container to workspace $ws7
+$b $s+Shift+8 move container to workspace $ws8
+$b $s+Shift+9 move container to workspace $ws9
+$b $s+Shift+0 move container to workspace $ws0
+
+# There are many ways to assign class, title, and instances to Workspaces. See below:
+
+# WORKSPACE 1 
+for_window [class="Chromium"] move window to workspace 1; workspace 1
+
+# WORKSPACE 2
+for_window [instance="nemo"] move window to workspace 2; workspace 2
+
+# WORKSPACE 3
+assign [class="gnome-text-editor"] $ws3 
+
+# WORKSPACE 4
+for_window [title="(?i)Subscriptions - YouTube - Chromium"] move to workspace 4; workspace 4
+
+# WORKSPACE 5 - Messaging
+for_window [instance="telegram-desktop"] move window to workspace 5
+
+
+# Messengers  Mode for Workspace 5
+$b $s+m mode "messaging"
+mode "messaging" {
+        # These bindings trigger as soon as you enter the messaging mode
+        
+        # Pressing t will open telegram
+        $b t $e flatpak run org.telegram.desktop
+
+        # Pressing d will open Discord.
+        $b d $e discord
+
+        # Add whatever other programs or messengers that you like
+
+        # back to normal: Enter or Escape
+        $b Return mode "default"
+        $b Escape mode "default"R
+        
+}
+
+# WORKSPACE 6
+for_window [class="Gimp-2.10"] move to workspace 6; workspace 6
+
+# WORKSPACE 7
+for_window [class="Virt-manger"] move to workspace 7; workspace 7
+
+# WORKSPACE 8
+for_window [class="vlc"] move to workspace 8; workspace 8
+
+
+# reload the configuration file
+$b $s+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+$b $s+Shift+r restart
+# exit i3 (logs you out of your X session)
+$b $s+Shift+e $e "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that by holding $s+right click)
+$b $s+r mode "resize"
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        $b j resize shrink width 10 px or 10 ppt
+        $b k resize grow height 10 px or 10 ppt
+        $b l resize shrink height 10 px or 10 ppt
+        $b semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        $b Left resize shrink width 10 px or 10 ppt
+        $b Down resize grow height 10 px or 10 ppt
+        $b Up resize shrink height 10 px or 10 ppt
+        $b Right resize grow width 10 px or 10 ppt
+
+        #resize Windows
+        # Left Monitor
+        $b F1 $e --no-startup-id "i3-msg resize set 500 500 px; i3-msg move position center"
+       $b F2 $e --no-startup-id "i3-msg resize set 800 600 px; i3-msg move position center"
+       $b F3 $e --no-startup-id "i3-msg resize set 1600 1000 px; i3-msg move position center"
+       $b F4 $e --no-startup-id "i3-msg resize set 1880 1040 px; i3-msg move position center"
+
+        # Middle Monitor
+       $b F5 $e --no-startup-id "i3-msg resize set 1900 960 px px; i3-msg move position center" 
+       $b F6 $e --no-startup-id "i3-msg resize set 2000 1200 px; i3-msg move position center"
+       $b F7 $e --no-startup-id "i3-msg resize set 2200 1250 px; i3-msg move position center"
+       $b F8 $e --no-startup-id "i3-msg resize set 2450 1360 px; i3-msg move position center"
+        
+        
+        # Portrait  Monitor
+       #$b F9 $e --no-startup-id "i3-msg resize set 700 800 px; i3-msg move position #center"
+       #$b F10 $e --no-startup-id "i3-msg resize set 700 1200 px; i3-msg move position #center"
+       #$b F11 $e --no-startup-id "i3-msg resize set 800 1400 px; i3-msg move position #center"
+       #$b F12 $e --no-startup-id "i3-msg resize set 1040 1880 px; i3-msg move position #center"
+
+        # back to normal: Enter or Escape
+        $b Return mode "default"
+        $b Escape mode "default"
+}
+
+#---------------------------------------------------------------------
+# WINDOW RULES
+#---------------------------------------------------------------------
+for_window [title="(?i)VLC media player"] focus
+
+#for_window [instance="bitwarden" class="Bitwarden"] floating enable, resize # bitwarden
+#for_window [class=".protonvpn-app"] floating enable, resize # protonvpn
+
+ 
+# SCRATCHPAD RULES
+
+# Make the currently focused window a scratchpad
+$b $s+plus move scratchpad
+$b $a+plus move scratchpad
+
+# Cycle through Scratchpad Windows
+$b $s+minus scratchpad show
+$b $a+minus scratchpad show
+
+# Applications binded to Scratchpad
+for_window [title="SCRATCHTERM"] move window to scratchpad
+$b Menu [title="SCRATCHTERM"] scratchpad show, move position center, resize set 1600 1000 px
+# Right Ctrl bind just in case your keyboard doesn't have a Menu key
+bindcode 105  [title="SCRATCHTERM"] scratchpad show, move position center, resize set 1600 1000 px
+
+for_window [title="Bitwarden"] move window to scratchpad
+$b $s+b [title="Bitwarden"] scratchpad show 
+for_window [title="Resources"] move window to scratchpad
+$b Control+$a+Delete [title="Resources"] scratchpad show 
+
+# MORE STARTUP SCRIPTS:
+$e --no-startup-id $HOME/.screenlayout/monitors.sh # monitors layouts
+
+# Compositor to stop screen tearing
+exec_always --no-startup-id picom -b --config $HOME/.config/picom.conf
+
+
+
+#-----------------------------------------------------------------------------  
+# NOTES 
+#------------------------------------------------------------------------------
+
+#to Reload:
+# i3-msg reload
+
+# To bind programs to workspaces open a terminal and run:  "xprop | grep WM_CLASS"
+#Click on a window and you will get the instance and class name output
+
+# To get window titles open a terminal and run:  "wmctrl -l | grep "one word in the windows title"". Example: wmctrl -l | grep "Chromium"
+
+# To get key names open terminal and type: xev
+# ?! in title class or instance makes it case insensitive
+
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+  #  Mod1: Typically corresponds to the left Alt key.
+  #  Mod2: This often corresponds to the Num Lock key.
+  #  Mod3: This is usually unused by default.
+  #  Mod4: Often corresponds to the Super (Windows) key.
+  #  Mod5: Often corresponds to the Menu key or Compose key.
+
+# To make all scripts $eutable, cd to  top directory and run: find . -type f \( -name "*.py" -o -name "*.sh" -o -name "*.pl" \) -$e chmod +x {} + 

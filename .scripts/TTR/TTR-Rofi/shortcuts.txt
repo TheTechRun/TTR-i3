@@ -1,0 +1,163 @@
+APP SHORTCUTS:
+Nemo,Alt+N
+Joplin,Alt+J
+Chromium,Alt+W 
+VS Code,Alt+V
+
+Android Studio:
+Android Studio - Find:,Control+F
+Android Studio - Global Search:,Control+Shift+F
+Android Studio - Find & Replace:,Control+R
+
+Chromium:
+Chromium - Dev Tools:,Control+Shift+I
+
+LAYOUTS:
+Layout -  Stacked layout:,Super+F1
+Layout -  Toggle split layout:,Super+F2 
+Layout - Floating toggle:,Super+F3
+
+Micro Text Editor EDITOR:
+Micro Text Editor - Cut:,Ctrl+X
+Micro Text Editor - Find & search:,Ctrl+F then Enter
+Micro Text Editor - Find next of current search:,Ctrl+N
+Micro Text Editor - Find previous of current search:,Ctrl+P
+Micro Text Editor - Find next history of current search:,Ctrl+N
+Micro Text Editor - Find previous history of current search:,Ctrl+P
+Micro Text Editor - Open a new tab:,Ctrl+T
+Micro Text Editor - Previous tab:,Alt + ,
+Next tab:,Alt + .
+Micro Text Editor - Open a command prompt for running commands (see > help commands for a list of valid commands):,Ctrl + E
+Micro Text Editor - Move cursor to the beginning of the file:,Ctrl + Home OR
+Ctrl + Up Arrow
+Micro Text Editor - Move cursor to the end of the file:,Ctrl + End OR
+Ctrl + Down Arrow
+Micro Text Editor - Move cursor up one page:,Page Up 	
+Micro Text Editor - Move cursor down one page:,Page Down
+
+Vim:
+Vim - Enter insert mode:i
+Vim - Exit insert mode:Esc
+Vim - Save file:':w' (in command mode)
+Vim - Quit:':q' (in command mode)
+Vim - Save and quit:':wq' (in command mode)
+Vim - Force quit without saving:':q!' (in command mode)
+Vim - Undo:u
+Vim - Redo:Ctrl + R
+Vim - Copy line:yy
+Vim - Cut line:dd
+Vim - Paste:p
+Vim - Go to start of line:0
+Vim - Go to end of line:$
+Vim - Go to first line of file:gg
+Vim - Go to last line of file:G
+Vim - Go to specific line:':line_number' (in command mode)
+Vim - Search forward:/pattern
+Vim - Search backward:?pattern
+Vim - Next search result:n
+Vim - Previous search result:N
+Vim - Replace in current line:':s/old/new'
+Vim - Replace in entire file:':%s/old/new/g'
+Vim - Delete character:x
+Vim - Delete word:dw
+Vim - Delete from cursor to end of line:D
+Vim - Enter visual mode:v
+Vim - Enter visual line mode:V
+Vim - Enter visual block mode:Ctrl + V
+Vim - Indent line:>>
+Vim - Unindent line:
+Vim - Open new file:':e filename' (in command mode)
+Vim - Split window horizontally:':split' (in command mode)
+Vim - Split window vertically:':vsplit' (in command mode)
+Vim - Switch between windows:Ctrl + W, then arrow key
+
+THUNAR:
+Thunar - Close Tab: Control+W
+
+CHROMIUM:
+Chromium - Focus for Address:Ctrl+K
+Chromium - Focus for Search:.Ctrl+L
+Chromium - Open a new tab, and jump to it:Ctrl + t
+Chromium - Open a new window in Incognito mode:Ctrl + Shift + n
+Chromium - Jump to the next open tab:Ctrl + PgDn
+Chromium - Jump to the previous open tab:Ctrl + PgUp
+Chromium - Move tabs right or left:Ctrl + Shift + PgUp or Ctrl + Shift + PgDn
+Chromium - History:Ctrl+h
+
+TERMINATOR:
+Terminator - NEW Window:Ctrl+Shift+A
+Terminator - NEW Tab:Shift+Ctrl+T 
+Terminator - NAME Window:Ctrl+Alt+W 
+Terminator - NAME Tab:Ctrl+Alt+A 
+Terminator - NAME Terminal:Ctrl+Alt+X 
+
+RANGER:
+Ranger - Go to parent directory:h
+Ranger - Enter selected directory:l
+Ranger - Move up:k
+Ranger - Move down:j
+Ranger - Page up:Ctrl + U
+Ranger - Page down:Ctrl + D
+Ranger - Go to root directory:g
+Ranger - Go to home directory:gh
+Ranger - Search for files:/
+Ranger - Create a new file:Insert
+Ranger - Create a new directory:F7
+Ranger - Delete selected item:dD
+Ranger - Cut selected items:dd
+Ranger - Copy selected items:yy
+Ranger - Paste cut/copied items:pp
+Ranger - Rename current file:cw
+Ranger - Mark selected item:Space
+Ranger - Toggle hidden files:zh
+Ranger - Sort by name:on
+Ranger - Sort by size:os
+Ranger - Sort by type:ot
+Ranger - Quit Ranger:q
+Ranger - Open terminal here:S
+Ranger - Open file with default program:r
+Ranger - Toggle visual mode:v
+Ranger - Refresh the view:R
+Ranger - Show log:w
+Ranger - Execute shell command::
+Ranger - Execute ranger command:!
+Ranger - Filter files:f
+Ranger - Copy file path to clipboard:yp
+Ranger - Change permissions:chmod
+Ranger - Create bookmark:m
+Ranger - Go to bookmark:'
+Ranger - Show bookmarks:`
+
+VSCODE or CODIUM:
+VSCode - Add to multiple lines at once: Hold Alt key
+VSCode - Open Command Palette: Ctrl + Shift + P
+VSCode - Quick Open File: Ctrl + P
+VSCode - Toggle Sidebar: Ctrl + B
+VSCode - Toggle Terminal: Ctrl + `
+VSCode - Open New Window: Ctrl + Shift + N
+VSCode - Close Window: Ctrl + W
+VSCode - Save File: Ctrl + S
+VSCode - Save All Files: Ctrl + K S
+VSCode - Open File: Ctrl + O
+VSCode - New File: Ctrl + N
+VSCode - Cut Line: Ctrl + X
+VSCode - Copy Line: Ctrl + C
+VSCode - Paste: Ctrl + V
+VSCode - Undo: Ctrl + Z
+VSCode - Redo: Ctrl + Y
+VSCode - Find: Ctrl + F
+VSCode - Replace: Ctrl + H
+VSCode - Find in Files: Ctrl + Shift + F
+VSCode - Toggle Line Comment: Ctrl + /
+VSCode - Toggle Block Comment: Shift + Alt + A
+VSCode - Indent Line: Ctrl + ]
+VSCode - Outdent Line: Ctrl + [
+VSCode - Go to Line: Ctrl + G
+VSCode - Go to File: Ctrl + P
+VSCode - Go to Symbol: Ctrl + Shift + O
+VSCode - Show Problems Panel: Ctrl + Shift + M
+VSCode - Toggle Zen Mode: Ctrl + K Z
+VSCode - Split Editor: Ctrl + 
+VSCode - Switch Between Editors: Ctrl + 1, Ctrl + 2, etc.
+VSCode - Close Editor: Ctrl + F4
+VSCode - Open Settings: Ctrl + ,

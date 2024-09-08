@@ -1,0 +1,2 @@
+Github TTR,https://github.com/TheTechRun?tab=repositories
+Nix Packages,https://search.nixos.org/

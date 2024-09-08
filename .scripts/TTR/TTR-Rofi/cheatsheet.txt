@@ -1,0 +1,266 @@
+Podman Root List Running Containers!! sudo podman ps 	!!
+Podman Root List ALL Containers!! sudo podman ps -a !!
+Podman Root Stop Container!! sudo podman stop !!
+Podman Root Start Container!! sudo podman start!!
+Podman Root Remove Container!! sudo podman rm !!
+Podman Root start ALL Containers!! sudo podman start $(podman ps -a -q)!!
+Podman Root start ALL Previously Running Containers!! sudo podman start $(podman ps -a -q)!!
+Podman Root stop ALL Containers!! podman stop $(podman ps -q)!!
+!!
+Mega View Syncs!!mega-sync!!
+Mega Stop Syncs!!mega-sync -d <sync iD>!!
+
+i3 Kill focused window!! i3-msg "kill"!!
+i3 Move Specific App to Workspace!!i3-msg '[instance="app-name"] move window to workspace 1'!!
+i3 Focus next/previous window!! i3-msg "focus next" or i3-msg "focus prev"!!
+i3 Toggle floating mode!! i3-msg "toggle floating"!!
+i3 Split vertically!! i3-msg "split v"!!
+i3 Split horizontally!! i3-msg "split h"!!
+i3 Restart in-place, preserving your layout/session!!i3-msg restart!!
+i3 Reload the configuration file!!i3-msg reload!!
+i3 Terminate!!i3-msg exit!!
+i3 Stacking!!i3-msg layout stacking!!
+i3 Move Window to Worspace #!!i3-msg move workspace !!
+i3 Move Focus to Worspace #!!i3-msg workspace !!
+i3 Move focus to the left/right/up/down window!!i3-msg focus left!!right!!up!!down!!
+i3 Move the focused window to the left/right/up/down workspace!!i3-msg move left!!right!!up!!down!!
+i3 Split the current container vertically or horizontally!!i3-msg split v!!h!!
+i3 Change the layout of the current container!!i3-msg layout stacking!!tabbed!!toggle split!!
+i3 Toggle fullscreen mode for the focused window!!i3-msg fullscreen toggle!!
+i3 Toggle floating/tiling mode for the focused window!!i3-msg floating toggle!!
+i3 Kill the focused window!!i3-msg kill!!
+i3 Switch to the next/previous workspace!!i3-msg workspace next!!prev!!next_on_output!!prev_on_output!!
+i3 Rename the current workspace!!i3-msg rename workspace to "<new_name>"!!
+i3 Move the current workspace to another output!!i3-msg move workspace to output left!!right!!up!!down!!
+i3 Enter the specified mode (e.g., resize, move, etc.)!!i3-msg mode "<mode_name>"!!
+i3 Control the visibility of the i3 bar!!i3-msg bar mode <dock-hide-invisible-toggle-show>!!
+i3 Create a Worspace!! i3-msg workspace scrap1!!
+!!
+Distrobox Root User access!!sudo xhost +si:localuser:$USER!!
+Distrobox Add To App Launcher!!distrobox-export --app !!
+Distrobox List Containers!!distrobox list!!
+Distrobox Open Container!!distrobox enter !!
+Distrobox Stop Conatiner!!distrobox stop !!
+Distrobox Remove Container!!distrobox-rm !!
+Distrobox Create Fedora 39!!distrobox create -i registry.fedoraproject.org/fedora-toolbox:39 -n fedora39!!
+Distrobox Create Linux Mint 21.1!!distrobox create -i docker.io/linuxmintd/mint21.1-amd64 -n linux_mint21!!
+Distrobox Create Archlinux Latest!!distrobox create -i quay.io/toolbx/arch-toolbox:latest -n archlinux!!
+Distrobox Purge All Containers!!sudo rm -rf ~/.local/share/containers/storage/*!!
+Distrobox Add apps in Fedora!!sudo dnf update -y && sudo dnf install firefox -y && cd ~/Downloads && su -c ./install.sh !!
+!!
+Echo Path!!echo ${PATH} !!
+!!
+Cron Job Show History!!sudo journalctl -u cron!!
+Cron Job Show History Last 20!!sudo journalctl -u cron -n 20!!
+Cron Job List Master.sh History!!sudo journalctl -u cron !! grep master.sh!!
+Github CHAINED Push Command!!git add . && git commit -m "another commit" && git push origin master --force!!
+Github CHAINED Pull Command!!git fetch origin && git pull origin master --force
+Github Change main CONFIG branch!!git config --global init.defaultBranch master!!
+Github Change GIT branch!!git branch -M master!!
+Github Add commit!!git commit -m "another commit" !!
+Github Force upload!!git push --force-with-lease origin master!!
+Github List Files with big storage!!git ls-tree -r -l HEAD!!
+Github Embedd Video!![![Name](https://linkhere.gif)](https://www.youtube.com/linkhere)
+
+Debian Color Code!!D70751!!
+Steel Color Code!!6E788A!!
+Wheat Color Code!!F9C470!!
+Gray Color Code!!AAAAAA!!
+Purple Color Code!!A27AE4!!
+Almost Black Color Code!!1E1E1E!!
+Pink Color Code!!CC6088!!
+Yellow Color Code!!BDB562!!
+Orange Color Code!!FB805F!!
+
+NixOS CONFIG File!!sudo micro /etc/nixos/configuration.nix!!
+NixOS HOME Manager File!!sudo micro /etc/nixos/home.nix!!
+NixOS FLAKE File!!sudo micro /etc/nixos/flake.nix!!
+NixOS HARDWARE File!!sudo micro /etc/nixos/hardware-configuration.nix!!
+NixOS Home Manager Reload!!home-manager switch   !!
+NixOS Switch To New Configuration.nix!!sudo nixos-rebuild switch!!
+NixOS Garbage Collect!!sudo nix-collect-garbage --delete-older-than 3d!!
+NixOS Delete Old!!nix-collect-garbage --delete-old!!
+NixOs Rebuild Boto!!sudo nixos-rebuild boot!!
+NixOS Flakes Update Part 1!!sudo nix flake update!!
+NixOS Flakes Update Part 2!!sudo nixos-rebuild switch --flake .!!
+NixOS Flakes Update Combined!! cd /etc/nixos/ && sudo nix flake update && sudo nixos-rebuild switch --flake .!!
+NixOS Test the configuration without switching!!sudo nixos-rebuild test!!
+NixOs Github Search Term !! lang:nix <keyword>!!
+
+SytemD List timers!!systemctl list-timers!!
+SytemD Show timer details!!systemctl show --property=Description,TimersMonotonic <timer-name>!!
+SytemD Enable a timer!!systemctl enable <timer-name>!!
+SytemD Disable a timer!!systemctl enable <timer-name>!!
+SytemD Start a timer!!systemctl start <timer-name>!!
+SytemD Reload a timer!!systemctl reload <timer-name>!!
+SytemD Check timer status!!systemctl status <timer-name>!!
+
+Tailscale View All Proxies!!tailscale funnel status!!
+Tailscale Root Domain!!sudo tailscale serve --bg localhost:!!
+Tailscale Remove All Servers!! sudo tailscale serve --https=443 off!!
+Tailscale Stop One Server!!sudo tailscale serve --bg --set-path /<subdomainname> http://127.0.0.1:<port> off!!
+
+XDO Tool type a whole word or phrase!!xdotool type "Hello world!"!!
+XDO Tool type a letter or key!!xdotool key !!
+
+Micro Text Editor WORD Wrap!!set wordrap true!!
+Micro Text Editor SOFT Wrap!!set softwrap true!!
+Micro Text Editor Transparent!! set colorscheme simple!!
+
+Shebang Python!!#! /usr/bin/env python!!
+Shebang Bash!!#!/usr/bin/env bash!!
+
+Desktop Applications NixOS!!/etc/profiles/per-user/<username>/share/applications/!!
+Desktop Applications WebApps and Distrobox!!~/.local/share/applications!!
+
+Exclude a file or folder from deletion!!-name "filename.mp4"!!
+
+Docker Compose Timezone!!- TZ=America/New_York!!
+
+Permissions to home directory!!sudo chown -R $(whoami):$(whoami) ~/!!
+Permissions for All Directories!!find . -type f \( -name "*.sh" -o -name "*.py" -o -name "*.perl" -o -name "*.AppImage" \) -exec chmod +x {} +!!
+
+xprop Name and Class of Program!! xprop | grep WM_CLASS!!
+Title of Program Window!!xprop!!
+
+Terminal Scripts Command!!terminator -e "bash -c '~/path/to/script.sh; exec bash'"!!
+
+Reload Terminal shell after adding to Bash!!source ~/.bashrc  !!
+
+flatpak install repo!!flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo!!
+flatpak remove repo!!rm -R ~/.local/share/flatpak!!
+flatpak list installed apps!!flatpak list!!
+flatpak remove installed app!!flatpak uninstall <app-id>!!
+
+Find my local ip!!hostname -I!!
+
+Change terminal text editor!!select-editor!!
+
+Burn iso to usb or partition!!sudo dd if=/iso/path/here.iso of=dev/filepath/ere bs=4M status=progress oflag=sync!!
+
+Install deb!!sudo dpkg -i *.deb!!
+Deb install!!sudo dpkg -i *.deb!!
+
+
+Make all files in folders executable!!find . -type f \( -name "*.py" -o -name "*.sh" -o -name "*.pl" \) -exec chmod +x {} +  !!
+
+Starship reload!!starship init bash!!
+
+Dunst Notification!!notify-send "!!
+
+AppImage execute!!.AppImage --appimage-extract-and-run!!
+
+Symlink!!ln -s !!
+
+Markdown H1 !!#!!
+Markdown H2 !!##!!
+Markdown H3 !!###!!
+Markdown H4 !!####!!
+Markdown H5 !!#####!!
+Markdown H6 !!######!!
+Markdown Bold !!**!!
+Markdown Bold !!__!! 
+Markdown Italic !!*!!
+Markdown Italic !!_!! 
+Markdown Strikethrough !!~~!! 
+Markdown Underline !!<ins>!!
+Markdown Undordered !!Use *, -, or + followed by a space for each item!!
+Markdown Ordered !!Use numbers followed by a period and a space for each item!!
+Markdown Web Links !![]()!!
+Markdown Pics !!![text](image URL)!!
+Markdown inline Code !! `!!
+Markdown Block Code !! ```!!
+Markdown Quotes (one side only)!!>!!
+Markdown Code Language Syntax Highlighting !! specify the language after the first set of backticks (example., ```python)!!
+
+History!!history | grep -i
+
+N_m3u8DL-RE!!N_m3u8DL-RE
+
+adb install app!! adb install
+adb uninstall or remove app!!adb uninstall
+adb enable a package!!adb shell pm enable --user 0 <packagename>>
+aadb disable a package!!db shell pm disable-user --user 0 <packagename>
+adb list INSTALLED user apps!!adb shell pm list packages -3
+adb list ALL user apps!!adb shell pm list packages -s
+adb list ALL user apps with MORE INFO!!adb shell pm list packages -f -s
+
+Remote Samba!!smb://remote:445
+
+Java comment ONE line out!!//          //
+Java comment MULTIPLE lines out!!/*          */
+
+XML comment out!!<!--          -->
+
+ADD user to htpasswd!! htpasswd -B htpasswd user
+Remote REMOVE user to htpasswd!! micro ~/htpasswd
+
+Delete Remove Android Studio Lock File!!rm ~/.var/app/com.google.AndroidStudio/config/Google/AndroidStudio2024.1/.lock
+
+UFW Check Status!!sudo ufw status!!
+UFW Enable!!sudo ufw enable!!
+UFW Disable!!sudo ufw disable!!
+UFW Show Status with Numbered Rules!!sudo ufw status numbered!!
+UFW Reset to Default Settings!!sudo ufw reset!!
+UFW Allow Incoming Traffic on a Port!!sudo ufw allow <port>!!
+UFW Allow Incoming Traffic for a Service!!sudo ufw allow <service name>!!
+UFW Allow Incoming Traffic from Specific IP!!sudo ufw allow from <ip address>!!
+UFW Allow Traffic to Port from Specific IP!!sudo ufw allow from <ip address> to any port <port>!!
+UFW Deny Incoming Traffic on a Port!!sudo ufw deny <port>!!
+UFW Deny Incoming Traffic for a Service!!sudo ufw deny <service name>!!
+UFW Delete a Rule!!sudo ufw delete <rule>!!
+UFW Delete a Rule by Number!!sudo ufw delete <rule number>!!
+UFW Allow Outgoing Traffic!!sudo ufw allow out <port>!!
+UFW Allow Traffic on Specific Interface!!sudo ufw allow in on <interface name>!!
+UFW Allow Traffic from a Subnet!!sudo ufw allow from <ip address>/<subnet>!!
+UFW Allow Traffic Using Specific Protocol!!sudo ufw allow proto <protocol> to any port <port>!!
+UFW Enable Logging!!sudo ufw logging on!!
+UFW Disable Logging!!sudo ufw logging off!!
+UFW Set Logging Level!!sudo ufw logging <level>!!
+UFW List Application Profiles!!sudo ufw app list!!
+UFW Allow an Application Profile!!sudo ufw allow <profile name>!!
+UFW Show Info About Application Profile!!sudo ufw app info <profile name>!!
+UFW Apply Changes Without Disabling Firewall!!sudo ufw reload!!
+
+scrcpy record video!!scrcpy -r ~/Videos/scrcpy/file.mp4
+scrcpy record video NO AUDIO!!scrcpy --no-audio --record=file.mp4
+scrcpy record with time limit!!scrcpy --record=file.mp4 --time-limit=20  # in seconds
+
+Debian List All Listening Ports!!ss -tuln!!
+Debian List All TCP Listening Ports!!ss -tln!!
+Debian List All UDP Listening Ports!!ss -uln!!
+Debian Show Process Using a Specific Port!!sudo ss -lptn 'sport = :PORT'!!
+Debian List Open Ports with netstat!!sudo netstat -tuln!!
+Debian List Open Ports with netstat (with Process Names)!!sudo netstat -tulnp!!
+Debian List Open Ports with lsof!!sudo lsof -i -P -n | grep LISTEN!!
+Debian Check Specific Port Usage!!sudo lsof -i:PORT!!
+Debian Show All Established Connections!!ss -ta!!
+Debian Display Numeric Addresses and Port Numbers!!ss -tn!!
+Debian List All Open File Descriptors!!lsof!!
+Debian Show Network and UNIX Domain Sockets!!ss -a!!
+Debian Display Timer Information!!ss -ti!!
+Debian Show All Processes Listening on All Interfaces!!sudo netstat -anp!!
+Debian List All Ports (Including Unused)!!cat /etc/services!!
+
+Tar Uncompress tar.gz or tgz!!tar -xzvf filename.tar.gz!!
+Tar Uncompress tar.bz2!!tar -xjvf filename.tar.bz2!!
+Tar Uncompress tar.xz!!tar -xJvf filename.tar.xz!!
+Tar Uncompress tar!!tar -xvf filename.tar!!
+Zip Uncompress zip!!unzip filename.zip!!
+Zip Uncompress zip to specific directory!!unzip filename.zip -d /path/to/directory!!
+Rar Uncompress rar!!unrar x filename.rar!!
+7z Uncompress 7z!!7z x filename.7z!!
+Gzip Uncompress gz!!gzip -d filename.gz!!
+Bzip2 Uncompress bz2!!bzip2 -d filename.bz2!!
+Xz Uncompress xz!!xz -d filename.xz!!
+Lzma Uncompress lzma!!lzma -d filename.lzma!!
+Tar List contents without extracting!!tar -tvf filename.tar!!
+Zip List contents without extracting!!unzip -l filename.zip!!
+Rar List contents without extracting!!unrar l filename.rar!!
+7z List contents without extracting!!7z l filename.7z!!
+Tar Extract single file from archive!!tar -xvf filename.tar path/to/file!!
+Zip Extract single file from archive!!unzip filename.zip file.txt!!
+Tar Extract to specific directory!!tar -xvf filename.tar -C /path/to/directory!!
+Gzip Compress file!!gzip filename!!
+Bzip2 Compress file!!bzip2 filename!!
+Xz Compress file!!xz filename!!

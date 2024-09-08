@@ -1,0 +1,20 @@
+i3Config,~/.config/i3/config
+Universal Script,~/.scripts/rofiscripts/Universal/universal.sh
+Atext Apps Text,~/.scripts/rofiscripts/Universal/apps.txt
+Btext Bookmarks Text,~/.scripts/rofiscripts/Universal/bookmarks.txt
+Ctext Cheat Sheet Text,~/.scripts/rofiscripts/Universal/cheatsheet.txt
+Dtext Directories Text,~/.scripts/rofiscripts/Universal/directories.txt
+Cheat Sheet Script,~/.scripts/rofiscripts/cheatsheet/cheatsheet.sh
+Ftext Files Text,~/.scripts/rofiscripts/Universal/files.txt
+Stext Shortcuts Text,~/.scripts/rofiscripts/Universal/shortcuts.txt
+Stext Scripts Text,~/.scripts/rofiscripts/Universal/scripts.txt
+Picom,~/.config/picom.conf
+Rofi Config,~/.config/rofi/config.rasi
+Default Apps USER,~/.config/mimeapps.list
+Default Apps SHARED,~/.local/share/applications
+Dunst,~/.config/dunst/dunstrc
+polybar config,~/.config/polybar/config.ini
+gitignore,~/.gitignore
+bashrc,~/.bashrc
+starship,~/.config/starship.toml
+TTR Theme.sh,~/.scripts/TTR-Themer/rofi-themer.sh

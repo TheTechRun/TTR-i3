@@ -1,0 +1,3 @@
+
+Power,~/.scripts/rofiscripts/Universal/Terminal_Scripts/power.sh
+Themes Switcher,~/.scripts/rofiscripts/Universal/Terminal_Scripts/themes.sh

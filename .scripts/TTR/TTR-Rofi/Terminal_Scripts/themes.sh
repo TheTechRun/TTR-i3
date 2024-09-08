@@ -1,0 +1,1 @@
+terminator -e "bash -c '~/.scripts/themes.sh; exec bash'"

@@ -1,0 +1,34 @@
+Alacritty:,alacritty
+Android Studio:,flatpak run com.google.AndroidStudio
+Application Finder:,xfce4-appfinder
+Arandr:,arandr
+Autokey:,autokey
+Brave Browser:,flatpak run com.brave.Browser
+Chromium:Super+W,chromium %U
+Color Picker:,gpick %u
+Featherpad:,featherpad
+Ferdium:,flatpak run org.ferdium.Ferdium
+Firefox:,firefox-esr
+Fsearch:Super+S,fsearch
+Gimp:,gimp-2.10
+Joplin:Super+J,flatpak run net.cozic.joplin_desktop
+Kdenlive:,flatpak run org.kde.kdenlive
+Localsend:,flatpak run org.localsend.localsend_app
+LxAppearance:,lxappearance
+Nemo:Super+i,nemo
+Nitrogen:,nitrogen
+OBS:,flatpak run com.obsproject.Studio
+Pika Backup:,flatpak run org.gnome.World.PikaBackup
+Qbit:,flatpak run org.qbittorrent.qBittorrent
+RustDesk:,rustdesk %u
+Telegram:,flatpak run org.telegram.desktop
+Terminator:Super+T,terminator -l ONE
+Thunar:Super+F,thunar
+SCRATCHPAD RED:Super+D,terminator -p RED -l RED
+SCRATCHPAD Resource Manager:,alacritty -t Resources -e btm
+SCRATCHPAD Lollypop:Super+L,lollypop %U
+SCRATCHPAD SCRATCHTERM:Menu,terminator -l SCRATCHTERM
+VLC:,vlc
+VMM:,virt-manager
+VSCodium:Super+V,codium %F
+Xtreme Download Manager XDM:,xdman
