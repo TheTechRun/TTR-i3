@@ -150,10 +150,10 @@ $b $s+q kill
 # FOCUS ON WINDOW
 
 # Change Focus with hjkl
-$b $s+j focus left
-$b $s+k focus down
-$b $s+l focus up
-$b $s+semicolon focus right
+$b $s+h focus left
+$b $s+j focus down
+$b $s+k focus up
+$b $s+l focus right
 
 # Change Focus with Cursor keys:
 $b $s+Left focus left
@@ -164,10 +164,10 @@ $b $s+Right focus right
 # MOVE FOCUSED WINDOW
 
 # Move Focused Window with hjkl
-$b $s+Shift+j move left
-$b $s+Shift+k move down
-$b $s+Shift+l move up
-$b $s+Shift+semicolon move right
+$b $s+Shift+h move left
+$b $s+Shift+j move down
+$b $s+Shift+k move up
+$b $s+Shift+lmove right
 
 #  Move Focused Window with Cursor keys:
 $b $s+Shift+Left move left

@@ -40,6 +40,8 @@ Be sure to pay attention to the prompts and reboot.
 
 **Menu** = Terminal Popup (Scratchpad)
 
+**Super+w** = Web Browser (Chromium)
+
 **Super+t** = Terminal (Alacritty)
 
 **Super+f** = File Browser (Nemo)
@@ -50,7 +52,7 @@ Be sure to pay attention to the prompts and reboot.
 
 **Super+c** = Clipboard (Greenclip)
 
-**Super+l** = Lockscreen (light-locker)
+**Alt+l** = Lockscreen (light-locker)
 
 **See ~/.config/i3/config for the rest of the keybinds.**
 

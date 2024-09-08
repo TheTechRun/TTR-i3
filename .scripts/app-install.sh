@@ -4,7 +4,7 @@
 
 # Install apps. Remove or add to your liking.
 apt update
-apt install -y alacritty arandr chromium curl dmenu dunst gnome-text-editor i3 libnotify-bin libreoffice light-locker lightdm nemo network-manager-gnome nitrogen picom polybar powerline rofi slick-greeter xautolock xorg
+apt install -y alacritty arandr chromium curl dmenu dunst gnome-text-editor i3 libnotify-bin light-locker lightdm nemo network-manager-gnome nitrogen picom polybar powerline rofi slick-greeter xautolock xorg
 
 # Install Greenclip (Update the link with the latest Greenclip)
 cd ~/
