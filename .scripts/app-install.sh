@@ -4,7 +4,7 @@
 
 # Install apps. Remove or add to your liking.
 apt update
-apt install -y alacritty, arandr, chromium, curl, dmenu, dunst, gnome-text-editor, greenclip, i3, libnotify-bin, libreoffice, light-locker, lightdm, nemo, network-manager-gnome, nitrogen, picom, polybar, powerline, rofi, slick-greeter, starship, xautolock, xorg
+apt install -y alacritty arandr chromium curl dmenu dunst gnome-text-editor i3 libnotify-bin libreoffice light-locker lightdm nemo network-manager-gnome nitrogen picom polybar powerline rofi slick-greeter xautolock xorg
 
 # Install Greenclip (Update the link with the latest Greenclip)
 cd ~/
@@ -17,7 +17,7 @@ greenclip daemon
  curl -sS https://starship.rs/install.sh | sh
  echo 'eval "$(starship init bash)"' >> ~/.bashrc
 
-# In ~/.config/starship.toml, you can change the disto logo and username on line 40
+# In ~/.config/starship.toml you can change the disto logo and username on line 40
 # Set transparency for different apps in ~/.config/picom.conf
 
 exit
