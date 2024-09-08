@@ -358,9 +358,9 @@ $b $a+minus scratchpad show
 
 # Applications binded to Scratchpad
 for_window [title="SCRATCHTERM"] move window to scratchpad
-$b Menu [title="SCRATCHTERM"] scratchpad show, move position center, resize set 1600 1000 px
+$b Menu [title="SCRATCHTERM"] scratchpad show, move position center, resize set 800 600 px
 # Right Ctrl bind just in case your keyboard doesn't have a Menu key
-bindcode 105  [title="SCRATCHTERM"] scratchpad show, move position center, resize set 1600 1000 px
+bindcode 105  [title="SCRATCHTERM"] scratchpad show, move position center, resize set 800 600 px
 
 for_window [title="Bitwarden"] move window to scratchpad
 $b $s+b [title="Bitwarden"] scratchpad show 
