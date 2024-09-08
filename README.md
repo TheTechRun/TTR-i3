@@ -4,7 +4,7 @@
 ***Tested and working on Debian 12 Bookworm but should be good to go on many other distros with some slight alterations*** 
 
 ### <ins>App Dependencies<ins>: 
-alacritty, arandr, chromium, curl, dmenu, dunst, git, gnome-text-editor, greenclip, i3, libnotify-bin, libreoffice, light-locker, lightdm, nemo, network-manager-gnome, nitrogen, picom, polybar, powerline, rofi, slick-greeter, starship, xautolock, xorg
+alacritty, arandr, chromium, curl, dmenu, dunst, git, gnome-text-editor, greenclip, i3, libnotify-bin, light-locker, lightdm, nemo, network-manager-gnome, nitrogen, picom, polybar, powerline, rofi, slick-greeter, starship, xautolock, xorg
 
 **Note**: *You can go to ~/.config/polybar/modules and alter the App scripts as you like.*
 
