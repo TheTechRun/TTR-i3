@@ -167,7 +167,7 @@ $b $s+Right focus right
 $b $s+Shift+h move left
 $b $s+Shift+j move down
 $b $s+Shift+k move up
-$b $s+Shift+lmove right
+$b $s+Shift+l move right
 
 #  Move Focused Window with Cursor keys:
 $b $s+Shift+Left move left
