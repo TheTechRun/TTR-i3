@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
 # File paths
-BOOKMARKS_FILE="$HOME/.scripts/rofiscripts/Universal/bookmarks.txt"
-DIRECTORIES_FILE="$HOME/.scripts/rofiscripts/Universal/directories.txt"
-APPS_FILE="$HOME/.scripts/rofiscripts/Universal/apps.txt"
-FILES_FILE="$HOME/.scripts/rofiscripts/Universal/files.txt"
-SHORTCUTS_FILE="$HOME/.scripts/rofiscripts/Universal/shortcuts.txt"
-SCRIPTS_FILE="$HOME/.scripts/rofiscripts/Universal/scripts.txt"
-CHEATSHEET_FILE="$HOME/.scripts/rofiscripts/Universal/cheatsheet.txt"
+BOOKMARKS_FILE="$HOME/.scripts/TTR/TTR-Rofi/bookmarks.txt"
+DIRECTORIES_FILE="$HOME/.scripts/TTR/TTR-Rofi/directories.txt"
+APPS_FILE="$HOME/.scripts/TTR/TTR-Rofi/apps.txt"
+FILES_FILE="$HOME/.scripts/TTR/TTR-Rofi/files.txt"
+SHORTCUTS_FILE="$HOME/.scripts/TTR/TTR-Rofi/shortcuts.txt"
+SCRIPTS_FILE="$HOME/.scripts/TTR/TTR-Rofi/scripts.txt"
+CHEATSHEET_FILE="$HOME/.scripts/TTR/TTR-Rofi/cheatsheet.txt"
 
 # Temporary file to store the combined list
 TEMP_FILE=$(mktemp)
