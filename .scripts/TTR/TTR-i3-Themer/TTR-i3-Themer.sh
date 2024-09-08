@@ -125,24 +125,14 @@ set_nitrogen_wallpaper
 
 echo "Color codes updated in all specified config files."
 
-# Restart Thunar
-#pkill thunar
-#sleep 1
-#thunar &
 
-# Restart Terminator (commented out as per your request)
-#pkill terminator
-#sleep 1
-#terminator
+pkill alacritty
+sleep 1
+alacritty &
 
-# For Testing
-#pkill alacritty
-#sleep 1
-#alacritty &
-#
-#pkill nemo
-#sleep 1
-#nemo &
+pkill nemo
+sleep 1
+nemo &
 
 # Restart Dunst to apply changes
 pkill dunst
