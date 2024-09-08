@@ -66,7 +66,7 @@ elif [[ $SELECTION == FILE:* ]]; then
     FILE=$(awk -F, -v title="$TITLE" '$1 == title {print $2}' "$FILES_FILE")
     FILE="${FILE//\~/$HOME}"
     echo "Opening File: $FILE" >> /tmp/universal_rofi_debug.log
-    codium "$FILE"
+    gnome-text-editor "$FILE"
 elif [[ $SELECTION == SHORTCUT:* ]]; then
     TITLE="${SELECTION#SHORTCUT: }"
     DESCRIPTION=$(awk -F, -v title="$TITLE" '$1 == title {print $2}' "$SHORTCUTS_FILE")
